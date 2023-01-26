@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Tip Calculator</title>
+</head>
+<body class="p-0 m-0" id="container">
+    <div class="flex flex-col flex-wrap justify-center items-center h-screen bg-[url('images/waiter.jpg')] bg-cover bg-no-repeat">
+        <div class="flex flex-col flex-wrap justify-center items-center my-0 mx-auto py-8 px-10 w-full max-w-[600px] bg-gradient-to-r from-blue-500 to-gray-500 rounded-[50px] opacity-90">
+             <div class="mb-4 w-full heading">
+                 <h1 class="text-center text-[24px]">Tip Calculator</h1>
+             </div>
+             <div class="px-4 py-2 w-full flex justify-center items-center form">
+                <form action="" class="w-full">
+                    <div class="w-full mb-3 mx-auto flex flex-col items-center bill-amount">
+                        <p class="mb-3 text-center font-serif ">Please enter the amount of your bill: </p>
+                        <div class="amount">
+                            <label for="bill" class="mx-1">Rs.</label>
+                        <input id="bill" type="text" placeholder="Bill Amount" size="30">
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center service-container">
+                        <p class="text-center">How was your service?</p> 
+                        <label for="service"></label>
+                        <select class="w-[33%] mx-auto" name="" id="service">
+                            <option disabled selected value="0">Select an option</option>
+                            <option value="0.35">35&#37; &#45; Amazing</option>
+                            <option value="0.25">25&#37; &#45; Good</option>
+                            <option value="0.20">20&#37; &#45; Satisfactory</option>
+                            <option value="0.15">15&#37; &#45; Bad</option>
+                            <option value="0.10">10&#37; &#45; Disgusting</option>
+                        </select>
+                    </div>
+                </form>
+             </div>
+             <div class="w-full px-4 py-2 flex justify-center flex-col people">
+                 <p class="text-center">How many people are sharing the bill?</p>
+                 <label for="numOfPeople"></label>
+                 <input type="text" name="numOfPeople" id="numOfPeople" placeholder="Number of People" class="my-3 w-[40%] mx-auto">
+                 <button id="calculate-btn" type="button" class="w-[30%] mx-auto border-[1.5px] border-black bg-cyan-500">Calculate</button>
+             </div>
+             <div id="tip-container" class="my-2 bg-white w-[30%] text-center rounded-[50px] ">
+                Rs. <span id="tip">0.00</span> <small id="each">each</small>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</body>
+</html>
